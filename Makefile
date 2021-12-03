@@ -12,7 +12,7 @@ OBJS := $(SOURCES:.cpp=.o)
 all: networkCounter
 
 networkCounter: $(OBJS)
-	$(CC) $(CFLAGS) -std=gnu++17 -o $(LFLAGS) $(LIBS)
+	$(CC) $(CFLAGS) -std=gnu++17 -o $(LFLAGS) $(LIBS) -libc++ -o networkCounter
 
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<
